@@ -1,0 +1,137 @@
+/* ===== NAVBAR (same as checker) ===== */
+.navbar {
+  background: linear-gradient(135deg, #4a90e2, #357ABD) ;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff ;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85) ;
+  margin-left: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff ;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+  color: #fff ;
+  font-weight: bold;
+}
+
+/* ===== BODY (same system) ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+}
+
+/* ===== MAIN CARD ===== */
+section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* ===== CALENDAR ===== */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.day {
+  padding: 15px;
+  background: #f9fbff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.day:hover {
+  transform: translateY(-3px);
+}
+
+.day.selected {
+  border: 2px solid #4a90e2;
+}
+
+/* ===== MOODS ===== */
+.happy { background: #d4f8e8; }
+.neutral { background: #f1f3f5; }
+.sad { background: #dbeafe; }
+.stressed { background: #ffe0e0 ; }
+
+/* ===== PICKER ===== */
+.mood-picker {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #6c8cff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5a78e0;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  #calendar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

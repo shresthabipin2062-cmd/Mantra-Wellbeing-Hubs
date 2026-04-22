@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mood Tracker</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="/css/tracker.css" />
+  </head>
+
+  <body>
+    <!-- ✅ SAME NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Mantra Wellbeing Hub</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/checker.html">Check</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" href="/tracker.html">Mood</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+      <h1>Mood Tracker</h1>
+    </header>
+
+    <!-- MAIN -->
+    <section>
+      <h2>Track Your Mood</h2>
+      <div class="date-controls">
+        <select id="month"></select>
+        <select id="year"></select>
+      </div>
+      <div id="calendar"></div>
+
+      <div class="mood-picker">
+        <select id="mood">
+          <option value="happy">😊 Happy</option>
+          <option value="neutral">😐 Neutral</option>
+          <option value="sad">😢 Sad</option>
+          <option value="stressed">😡 Stressed</option>
+        </select>
+
+        <button onclick="saveMood()">Save Mood</button>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="/js/tracker.js"></script>
+  </body>
+</html>
